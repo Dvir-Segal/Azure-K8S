@@ -34,7 +34,7 @@ kubectl get pods
 ```
 ### Get Ingress IP
 ```
-kubectl get svc -n ingress-nginx ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+kubectl get svc -n ingress-nginx nginx-ingress-ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
 **External Access: Browse `http://<EXTERNAL_IP>/bitcoin` & `http://<EXTERNAL_IP>/nginx`**
 
