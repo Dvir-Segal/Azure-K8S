@@ -33,10 +33,10 @@ kubectl apply -f network-policy.yaml
 kubectl get pods
 ```
 ### Get Ingress IP
-
+```
 kubectl get svc -n ingress-nginx ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
-
-**External Access: Browse `http://<EXTERNAL_IP>` & `http://<EXTERNAL_IP>/bitcoin`**
+```
+**External Access: Browse `http://<EXTERNAL_IP>/bitcoin` & `http://<EXTERNAL_IP>/nginx`**
 
 <img src="photos/bitcoin-service.PNG" alt="Bitcoin Price Tracker" width="380"/>   <img src="photos/nginx-service.PNG" alt="Nginx Welcome Page" width="400"/>
 
