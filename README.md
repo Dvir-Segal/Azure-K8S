@@ -8,7 +8,7 @@ This project automates the deployment of a production-ready AKS cluster on Azure
 (Navigate to `build_image/` directory)
 ```
 docker build -t YOUR_REGISTRY_NAME/monitor-bitcoin:tag .
-docker push YOUR_REGISTRY_NAME/monitor-bitcoin:tag (DockerHub)
+docker push YOUR_REGISTRY_NAME/monitor-bitcoin:tag
 ```
 ### Deploy Azure Infrastructure (Terraform) via Azure Colud Shell
 (Navigate to `terraform/` directory)
