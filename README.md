@@ -5,17 +5,20 @@ This project automates the deployment of a production-ready AKS cluster on Azure
 ## Setup & Deployment
 
 ### Build & Push Docker Image
+(Navigate to `build_image/` directory)
 ```
 docker build -t YOUR_REGISTRY_NAME/monitor-bitcoin:tag .
 docker push YOUR_REGISTRY_NAME/monitor-bitcoin:tag (DockerHub)
 ```
 ### Deploy Azure Infrastructure (Terraform) via Azure Colud Shell
+(Navigate to `terraform/` directory)
 ```
 terraform init
 terraform plan
 terraform apply
 ```
 ### Deploy K8S Applications (YAMLs)
+(Navigate to `kubernetes/` directory)
 ```
 kubectl apply -f nginx-deployment.yaml
 kubectl apply -f nginx-service.yaml
@@ -35,7 +38,7 @@ kubectl get svc -n ingress-nginx ingress-nginx-controller -o jsonpath='{.status.
 
 **External Access: Browse `http://<EXTERNAL_IP>` & `http://<EXTERNAL_IP>/bitcoin`**
 
-<img src="images/bitcoin-service.PNG" alt="Bitcoin Price Tracker" width="380"/>   <img src="images/nginx-service.PNG" alt="Nginx Welcome Page" width="400"/>
+<img src="photos/bitcoin-service.PNG" alt="Bitcoin Price Tracker" width="380"/>   <img src="photos/nginx-service.PNG" alt="Nginx Welcome Page" width="400"/>
 
 ### Bitcoin Network Policy Blocking (Verify both fail)
 
