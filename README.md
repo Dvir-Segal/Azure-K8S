@@ -36,9 +36,9 @@ kubectl get svc -n ingress-nginx ingress-nginx-controller -o jsonpath='{.status.
 
 **External Access: Browse `http://<EXTERNAL_IP>` & `http://<EXTERNAL_IP>/bitcoin`**
 
-![Nginx Welcome Page](images/nginx_welcome.png)
+![Bitcoin Price Tracker](images/bitcoin-service.png)
 
-![Bitcoin Price Tracker](images/bitcoin_price_tracker.png)
+![Nginx Welcome Page](images/nginx-service.png)
 
 ### Bitcoin Network Policy Blocking (Verify both fail)
 
