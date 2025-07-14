@@ -1,3 +1,4 @@
+
 graph TD
     subgraph "Users"
         A[Internal Users<br>(Help Desk Staff)] -->|1. Authenticate| B(Microsoft Entra ID<br>(For Employee Mgmt)<br>[Core Identity])
